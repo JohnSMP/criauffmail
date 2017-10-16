@@ -1,7 +1,6 @@
 package desafio01_uffmail;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Aluno {
 
