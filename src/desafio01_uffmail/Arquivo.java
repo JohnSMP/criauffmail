@@ -48,16 +48,4 @@ public class Arquivo {
 
         return aluno;
     }
-
-//    void trocaUffmail(Aluno aluno) throws IOException {
-//        File input = new File("arquivo.csv");
-//        FileWriter write = new FileWriter("arquivo.csv");
-//        br = new BufferedReader(new FileReader("arquivo.csv"));
-//        int i = 0;
-//        while ((linha = br.readLine()) != null) {
-//            String[] alunos = linha.split(",");
-//            i++;
-//        }
-//
-//    }
 }
