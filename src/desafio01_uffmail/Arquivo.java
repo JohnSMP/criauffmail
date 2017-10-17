@@ -16,11 +16,9 @@ public class Arquivo {
     public Aluno buscaAluno(String matricula) {
 
         try {
-
             br = new BufferedReader(new FileReader("arquivo.csv"));
 
             while ((linha = br.readLine()) != null) {
-
                 String[] camposAluno = linha.split(",");
 
                 if (camposAluno[1].equals(matricula)) {
@@ -33,7 +31,6 @@ public class Arquivo {
                     aluno.setStatus(camposAluno[5]);
                 }
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -47,7 +44,6 @@ public class Arquivo {
                 }
             }
         }
-
         return aluno;
     }
 
@@ -57,13 +53,10 @@ public class Arquivo {
     }
 
     public ArrayList<Aluno> getListaAlunos(Aluno aluno) {
-
         ArrayList<Aluno> arrayAlunos = new ArrayList<>();
 
         try {
-
             br = new BufferedReader(new FileReader("arquivo.csv"));
-
             Aluno alunoLido;
 
             while ((linha = br.readLine()) != null) {
@@ -80,10 +73,8 @@ public class Arquivo {
                 if (alunoLido.getMatricula().equals(aluno.getMatricula())) {
                     alunoLido.setUffMail(aluno.getUffMail());
                 }
-
                 arrayAlunos.add(alunoLido);
             }
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -101,14 +92,13 @@ public class Arquivo {
     }
 
     public void salvaNoArquivo(ArrayList<Aluno> arrayAlunos) {
-        
+
         FileWriter fileWriter = null;
 
         try {
             fileWriter = new FileWriter("arquivo.csv");
 
             for (int i = 0; i < arrayAlunos.size(); i++) {
-            
                 fileWriter.append(arrayAlunos.get(i).getNome());
                 fileWriter.append(",");
                 fileWriter.append(arrayAlunos.get(i).getMatricula());
