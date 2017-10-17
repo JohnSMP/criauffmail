@@ -20,6 +20,10 @@ public class Interface {
         System.out.println("\nApenas alunos ativos podem criar um UFFMail.");
     }
 
+    public void possuiUffmail() {
+        System.out.println("\nEsse aluno já possui um UFFMail.");
+    }
+
     public void escolheUffmail(Aluno aluno, ArrayList<String> opcoes) {
         int opcao = 0;
         while (opcao < 1 || opcao > opcoes.size()) {
@@ -31,7 +35,7 @@ public class Interface {
         }
         aluno.setUffMail(opcoes.get(opcao - 1));
 
-        System.out.println("\nA criação de seu e-mail " + aluno.getUffMail() + " será feita nos próximos minutos.\n"
+        System.out.println("\nA criação de seu e-mail (" + aluno.getUffMail() + ") será feita nos próximos minutos.\n"
                 + "Um SMS foi enviado para " + aluno.getTelefone() + " com a sua senha de acesso. Obrigado :)");
     }
 }

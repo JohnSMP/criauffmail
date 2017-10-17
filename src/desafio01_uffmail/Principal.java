@@ -14,9 +14,12 @@ public class Principal {
             interage.alunoInexistente();
         } else if (aluno.isAtivo() == false) {
             interage.alunoInativo();
+        } else if (!aluno.getUffMail().equals("")) {
+            interage.possuiUffmail();
         } else {
             ArrayList<String> opcoes = aluno.criaOpcoesUffMail(aluno);
             interage.escolheUffmail(aluno, opcoes);
+            listaAlunos.atualizaArquivo(aluno);
         }
     }
 }
